@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dip"
+        android:text="xyz"
+        android:id="@+id/txt1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dip"
+        android:text="CCC"
+        android:id="@+id/txt2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dip"
+        android:text="Center Value"
+        android:id="@+id/txt3"/>
+
+    <seekbar.com.divyu.in.seekbar.ComboSeekBar
+        xmlns:cbs="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:thumbOffset="8dp"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        cbs:myColor="@android:color/black"
+        cbs:multiline="false"
+        cbs:textSize="10sp"/>
+
+
+
+
+</RelativeLayout>

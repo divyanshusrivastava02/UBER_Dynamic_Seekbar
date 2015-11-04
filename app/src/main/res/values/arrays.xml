@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="car_images">
+        <item>@drawable/auto1</item>
+        <item>@drawable/car3</item>
+        <item>@drawable/car4</item>
+        <item>@drawable/car5</item>
+        <item>@drawable/car</item>
+        <item>@drawable/scar</item>
+        <item>@drawable/car2</item>
+        <item>@drawable/car</item>
+        <item>@drawable/scar</item>
+        <item>@drawable/sliderknob</item>
+        <item>@drawable/car</item>
+        <item>@drawable/scar</item>
+    </string-array>
+</resources>
