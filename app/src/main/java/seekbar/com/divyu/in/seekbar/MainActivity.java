@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-         width = size.x;
+        width = size.x;
         int height = size.y;
 
 
@@ -86,7 +86,7 @@ public class MainActivity extends ActionBarActivity {
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                txt1.setText("DIVYAN   "+progress);
+                txt1.setText("PROGRESS VALUE   "+progress);
 
                 for(int k=1 ; k<divisionFormula.size();k++) {
                     if (progress > divisionFormula.get(k-1)) {
@@ -117,7 +117,7 @@ public class MainActivity extends ActionBarActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int val = 0;
                 val = seekBar.getProgress();
-                txt2.setText("ON STOP VAL   " + val);
+                txt2.setText("ON STOP VALUE   " + val);
 
 
                 System.out.println("MAP VALUE:::::" + pos + " %%% " + val + " ##  " + mLimitSplitter.get(pos).startPoint + " : " + mLimitSplitter.get(pos).endPoint);
