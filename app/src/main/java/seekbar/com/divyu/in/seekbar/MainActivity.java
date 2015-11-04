@@ -36,6 +36,11 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         ComboSeekBar mSeekBar =  (ComboSeekBar)findViewById(R.id.seekBar);
+
+
+        /**
+         *  ADD NEW UBER CARS AS PER YOUR NEED
+         */
         final List<String> seekBarStep = Arrays.asList("UBERX", "UBER GO", "UBER HUB", "UBER BLACK");
          imgs = getResources().obtainTypedArray(R.array.car_images);
         mSeekBar.setAdapter(seekBarStep);
