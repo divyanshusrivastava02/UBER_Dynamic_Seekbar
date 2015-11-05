@@ -40,7 +40,13 @@ public class MainActivity extends ActionBarActivity {
         /**
          *  ADD NEW UBER CARS AS PER YOUR NEED
          */
-        final List<String> seekBarStep = Arrays.asList("UBERX", "UBER GO", "UBER HUB", "UBER BLACK");
+        //CASE FOR 5
+        final List<String> seekBarStep = Arrays.asList("UBERX", "UBER GO", "UBER HUB", "UBER BLACK", "UBER BLACK");
+        //CASE FOR 6
+        //final List<String> seekBarStep = Arrays.asList("UBERX", "UBER GO", "UBER HUB", "UBER BLACK", "UBER BLACK", "UBER BLACK");
+
+
+
         imgs = getResources().obtainTypedArray(R.array.car_images);
         mSeekBar.setAdapter(seekBarStep);
         //mSeekBar.setThumb(getResources().getDrawable(R.drawable.sliderknob));
