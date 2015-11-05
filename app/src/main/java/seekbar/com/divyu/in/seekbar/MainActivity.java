@@ -45,7 +45,7 @@ public class MainActivity extends ActionBarActivity {
         mSeekBar.setAdapter(seekBarStep);
         //mSeekBar.setThumb(getResources().getDrawable(R.drawable.sliderknob));
         // mSeekBar.setColor(getResources().getColor(R.color.white));
-        mSeekBar.setProgress(5);
+        mSeekBar.setProgress(7);
         mSeekBar.setThumb(getResources().getDrawable(imgs.getResourceId(0, -1)));
 
         txt1 = (TextView)findViewById(R.id.txt1);
@@ -80,11 +80,13 @@ public class MainActivity extends ActionBarActivity {
             mLimitSplitter.put(i, LimitValues.createLimitValues(i, startVal, divisionFormula.get(i)));
             startVal = divisionFormula.get(i);
         }
+        final int minimumVal = 7;
+        final int maximumVal = 93;
 
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                txt1.setText("PROGRESS VALUE   "+progress);
+                txt1.setText("PROGRESS VALUE   " + progress);
 
                 for(int k=1 ; k<divisionFormula.size();k++) {
                     if (progress > divisionFormula.get(k-1)) {
@@ -93,16 +95,32 @@ public class MainActivity extends ActionBarActivity {
                 }
                 centerValue(mLimitSplitter.get(pos).startPoint, mLimitSplitter.get(pos).endPoint);
 
+
                 for(int i=1; i<seekBarStep.size();i++)
                 {
-                    if(progress>mLimitSplitter.get(pos).startPoint && progress<centerVal){
-                        seekBar.setThumb(getResources().getDrawable(imgs.getResourceId(pos-1, -1)));
+
+                    if (progress >= minimumVal) {
+
+                        if (progress <= maximumVal){
+                        if (progress > mLimitSplitter.get(pos).startPoint && progress < centerVal) {
+                            seekBar.setThumb(getResources().getDrawable(imgs.getResourceId(pos - 1, -1)));
+                        } else if (progress > centerVal && progress <= mLimitSplitter.get(pos).endPoint) {
+                            seekBar.setThumb(getResources().getDrawable(imgs.getResourceId(pos, -1)));
+                        }
                     }
-                    else if(progress>centerVal && progress<=mLimitSplitter.get(pos).endPoint){
-                        seekBar.setThumb(getResources().getDrawable(imgs.getResourceId(pos, -1)));
+                        else{
+                            seekBar.setProgress(maximumVal);
+                        }
+                    }
+                    else
+                    {
+                        seekBar.setProgress(minimumVal);
                     }
 
+
                 }
+
+
            //     imgs.recycle();
             }
 
