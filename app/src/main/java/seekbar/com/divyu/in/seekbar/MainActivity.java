@@ -37,19 +37,17 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.main_activity);
         ComboSeekBar mSeekBar =  (ComboSeekBar)findViewById(R.id.seekBar);
 
-
         /**
          *  ADD NEW UBER CARS AS PER YOUR NEED
          */
         final List<String> seekBarStep = Arrays.asList("UBERX", "UBER GO", "UBER HUB", "UBER BLACK");
-         imgs = getResources().obtainTypedArray(R.array.car_images);
+        imgs = getResources().obtainTypedArray(R.array.car_images);
         mSeekBar.setAdapter(seekBarStep);
         //mSeekBar.setThumb(getResources().getDrawable(R.drawable.sliderknob));
-       // mSeekBar.setColor(getResources().getColor(R.color.white));
+        // mSeekBar.setColor(getResources().getColor(R.color.white));
         mSeekBar.setProgress(5);
         mSeekBar.setThumb(getResources().getDrawable(imgs.getResourceId(0, -1)));
-       // mSeekBar.setProgressDrawable(getResources().getDrawable(R.drawable.road));
-      // int val =  mSeekBar.getProgress();
+
         txt1 = (TextView)findViewById(R.id.txt1);
         txt2 = (TextView)findViewById(R.id.txt2);
         txt3 = (TextView)findViewById(R.id.txt3);
@@ -76,17 +74,12 @@ public class MainActivity extends ActionBarActivity {
 
 
         mLimitSplitter = new HashMap<Integer, LimitValues>();
-
-
         currentVal = 100/seekBarStep.size();
         startVal = 100/seekBarStep.size()-currentVal;
         for(int i=1; i<seekBarStep.size();i++) {
             mLimitSplitter.put(i, LimitValues.createLimitValues(i, startVal, divisionFormula.get(i)));
             startVal = divisionFormula.get(i);
-
         }
-
-
 
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

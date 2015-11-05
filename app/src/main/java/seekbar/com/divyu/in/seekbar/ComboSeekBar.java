@@ -54,7 +54,6 @@ public class ComboSeekBar extends SeekBar {
 		mThumb = new CustomThumbDrawable(context, mColor);
 	//	setThumb(mThumb);
 		setThumb(getResources().getDrawable(R.drawable.sliderknob));
-
 		setProgressDrawable(new CustomDrawable(this.getProgressDrawable(), this, mThumb.getRadius(), mDots, mColor, mTextSize, mIsMultiline));
 		// по умолчанию не равно 0 и это проблема
 		setPadding(0, 0, 0, 0);

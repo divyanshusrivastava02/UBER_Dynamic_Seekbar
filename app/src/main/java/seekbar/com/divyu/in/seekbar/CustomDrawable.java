@@ -104,13 +104,13 @@ public class CustomDrawable extends Drawable {
 	@Override
 	public final void draw(Canvas canvas) {
 		// Log.d("--- draw:" + (getBounds().right - getBounds().left));
-		int height = (this.getIntrinsicHeight() / 2)+50;
+		int height = (this.getIntrinsicHeight() / 2)+80;
 		if (mDots.size() == 0) {
 			canvas.drawLine(0, height, getBounds().right, height, unselectLinePaint);
 			return;
 		}
 		for (ComboSeekBar.Dot dot : mDots) {
-			drawText(canvas, dot, dot.mX, height-40);
+			drawText(canvas, dot, dot.mX, height-70);
 			if (dot.isSelected) {
 				canvas.drawLine(mDots.get(0).mX, height, dot.mX, height, selectLinePaint);
 				canvas.drawLine(dot.mX, height, mDots.get(mDots.size() - 1).mX, height, unselectLinePaint);

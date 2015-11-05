@@ -32,6 +32,7 @@ public class CustomThumbDrawable extends Drawable {
 		circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		circlePaint.setColor((0xA0 << 24) + (color & 0x00FFFFFF));
 		invalidateSelf();
+
 	}
 	
 	public float getRadius() {
@@ -54,6 +55,7 @@ public class CustomThumbDrawable extends Drawable {
 		int height = this.getBounds().centerY();
 		int width = this.getBounds().centerX();
 		canvas.drawCircle(width + mRadius, height, mRadius, circlePaint);
+
 	}
 
 	@Override
@@ -69,6 +71,11 @@ public class CustomThumbDrawable extends Drawable {
 	@Override
 	public final int getOpacity() {
 		return PixelFormat.TRANSLUCENT;
+	}
+
+	@Override
+	public void setBounds(int left, int top, int right, int bottom) {
+		super.setBounds(left, top, right, bottom);
 	}
 
 	@Override
