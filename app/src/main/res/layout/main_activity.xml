@@ -36,13 +36,13 @@
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="90dip"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:thumbOffset="8dp"
         android:maxHeight="80dip"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dip"
-        cbs:myColor="@color/grey"
+        cbs:myColor="@android:color/darker_gray"
         cbs:multiline="false"
         cbs:textSize="8sp"/>
 

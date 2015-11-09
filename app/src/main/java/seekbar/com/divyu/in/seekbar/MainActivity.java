@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
         mSeekBar.setAdapter(seekBarStep);
         //mSeekBar.setThumb(getResources().getDrawable(R.drawable.sliderknob));
         // mSeekBar.setColor(getResources().getColor(R.color.white));
-        mSeekBar.setProgress(7);
+
         mSeekBar.setThumb(getResources().getDrawable(imgs.getResourceId(0, -1)));
 
         txt1 = (TextView)findViewById(R.id.txt1);
@@ -86,9 +86,18 @@ public class MainActivity extends ActionBarActivity {
             mLimitSplitter.put(i, LimitValues.createLimitValues(i, startVal, divisionFormula.get(i)));
             startVal = divisionFormula.get(i);
         }
-        final int minimumVal = 7;
-        final int maximumVal = 93;
+        final int minimumVal;
+        final int maximumVal;
+        if(width>=1200){
+            minimumVal = 4;
+            maximumVal = 96;
+        }else{
+            minimumVal = 7;
+            maximumVal = 93;
+        }
 
+        mSeekBar.setProgress(minimumVal);
+        System.out.println("W I D T H SIZE IS::::"+width);
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
