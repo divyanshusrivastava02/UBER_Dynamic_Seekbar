@@ -1,4 +1,4 @@
-# UBER_Dynamic_Seekbar
+# UBER style bottom scroll
 Uber Dynamic seekbar
 
 UBER Type seekbar with dynamic number of images I tested it for 4 5 and 6. Its supports multiple cars options dynamically.
